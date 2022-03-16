@@ -36,7 +36,16 @@ body,html {
   transform: scale(1.1);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
+  transition: all .07s ease;
 }
+
+.playing-not {
+  transform: scale(0.9091);
+  border-color: black;
+  box-shadow: none;
+}
+
+
 
 kbd {
   display: block;

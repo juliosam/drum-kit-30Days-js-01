@@ -79,11 +79,24 @@
 
       };
 
+      function transformback(e){
+        if (e.propertyName !== 'transform') return;
+
+        this.classList.remove('playing'); 
+      }
+
+      const keys = document.querySelectorAll(".key");
+
+      keys.forEach(key => key.addEventListener("transitionend", transformback));
+
       document.addEventListener("keydown", drumKit);
 
-      window.addEventListener("keyup",function(a){
+
+
+
+      /*window.addEventListener("keyup",function(a){
       const dogshei = document.querySelector(`.key[data-key="${a.keyCode}"]`);
-      dogshei.classList.remove('playing');})
+      dogshei.classList.remove('playing');})*/
 
 
 
